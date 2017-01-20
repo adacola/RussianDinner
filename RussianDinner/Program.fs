@@ -1,5 +1,6 @@
-﻿// F# の詳細については、http://fsharp.org を参照してください
-// 詳細については、'F# チュートリアル' プロジェクトを参照してください。
+﻿module Adacola.RussianDinner.Main
+
+open Argu
 
 [<EntryPoint>]
 let main argv = 
