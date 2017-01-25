@@ -26,6 +26,6 @@ module Caloriecalorie =
             let meal = Regex.Replace(meal, @"(?:\(|（).*?(?:\)|）)+\z", "")
             let meal = Regex.Replace(meal, @"\r\n|\n|\r", "")
             meal.Trim(' ', '　')
-        meals |> Seq.map normalize |> Seq.distinct
+        meals |> Seq.map normalize |> Seq.distinct |> Seq.map (fun x -> { Name = x })
 
     let provideMeals() = content.Value |> parseContent
